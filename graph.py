@@ -58,7 +58,7 @@ class graph:
         edges = gr.edges
         color_map = []
         for edge in edges:
-            if list(edge) in e:
+            if list(edge) in e or [list(edge)[1], list(edge)[0]] in e:
                 color_map.append('green')
             else:
                 color_map.append('blue')
@@ -67,5 +67,6 @@ class graph:
         for i in range(len(adjacency_matrix)):
             label_dict[i] = str(i)
 
-        nx.draw(gr, labels=label_dict, width=6, node_size=750, with_labels=True, edge_color=color_map)
+        nx.draw(gr, labels=label_dict, width=6, node_size=750, with_labels=True,
+                edge_color=color_map, node_color='green')
         plt.show()

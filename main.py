@@ -4,7 +4,7 @@ import random
 
 if __name__ == '__main__':
     generator = graph_generator()
-    graph = generator.next_graph(graph_type="full", n=6, m=3)
+    graph = generator.next_graph(graph_type="percent", n=10, m=3, percent=0.5)
     graph.show_graph()
 
     nr_1 = spanning_trees_number_math(graph)
