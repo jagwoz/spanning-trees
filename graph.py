@@ -67,5 +67,5 @@ class graph:
         for i in range(len(adjacency_matrix)):
             label_dict[i] = str(i)
 
-        nx.draw(gr, labels=label_dict, width=6, node_size=750, with_labels=True, edge_color=color_map, node_color="green")
+        nx.draw(gr, labels=label_dict, width=6, node_size=750, with_labels=True, edge_color=color_map)
         plt.show()
