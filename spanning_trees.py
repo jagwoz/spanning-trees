@@ -54,10 +54,7 @@ def spanning_trees_number_math(g):
         for j in range(n):
             if i == j:
                 degrees[i][j] = g.get_degree(i)
-
-    for i in range(n):
-        for j in range(n):
-            degrees[i][j] = degrees[i][j] - adjacency[i][j]
+	    degrees[i][j] -= adjacency[i][j]
 
     new_matrix = [[0 for _ in range(n - 1)] for _ in range(n - 1)]
     for i in range(n - 1):
