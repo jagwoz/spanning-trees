@@ -51,7 +51,9 @@ class graph_generator:
                         self.adjacency[actual + n + 1][actual] = 1
             return graph(adjacency=self.adjacency)
 
-        elif graph_type == "percent":
+        elif graph_type == 'percent' or graph_type == "random":
+            if graph_type == "random":
+                self.percent = np.random.uniform(0, 1)
             self.adjacency = [[1 for _ in range(n)] for _ in range(n)]
             for i in range(n):
                 for j in range(n):
